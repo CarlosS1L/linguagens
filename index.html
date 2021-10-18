@@ -1,0 +1,585 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="" lang="pt-PT">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Mais um trabalho." />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Carlos Jacinto" />
+
+  <title>CET - TPSI - CJ</title>
+
+  <link rel="icon" type="image/png" href="./img/favicon.png" alt="Favicon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="boilerplate.css" rel="stylesheet" type="text/css">
+  <link href="fluidLayout.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Viaoda+Libre&display=swap"
+    rel="stylesheet">
+
+  <script src="./actions.js"></script>
+  <!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+  <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <script src="respond.min.js"></script>
+
+  <style>
+    body {
+      font-family: "Sofia", sans-serif;
+
+    }
+
+    .head {
+      background-image: url("./img/banner.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h3 {
+      text-shadow: 3px 3px 3px #ababab;
+    }
+
+    .links {
+      position: absolute;
+      background-color: rgb(22, 17, 17);
+      top: 0px;
+      left: 0px;
+      width: 0%;
+      bottom: 0px;
+      text-align: center;
+      overflow: hidden;
+      text-shadow: 3px 3px 3px #ababab;
+      transition: 1s ease;
+    }
+
+    .help {
+      background-color: rgb(255, 255, 255);
+      padding-top: 10px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      color: rgb(13, 6, 100);
+    }
+
+    .links a::selection,
+    .links a:active,
+    .links a:visited {
+      color: rgb(13, 6, 100);
+    }
+
+    .icons {
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      top: 0px;
+      left: 0px;
+      width: 40px;
+      text-align: center;
+      
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+      margin: 5px;
+    }
+
+    .titulo {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(26, 29, 34, 0.7906512946975666) 100%);
+      width: 100%;
+      display: flex;
+      color: white;
+    }
+
+    .titulo * {
+      padding: 10px 5px;
+      margin: 0px;
+    }
+
+    .titulo i {
+      margin-left: auto;
+    }
+
+    .c11,
+    .c31,
+    .c32,
+    .c33 {
+      margin-bottom: 10px;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0px 0px 4px black;
+    }
+
+    .c11 h3,
+    .c31 h3,
+    .c32 h3,
+    .c33 h3 {
+      text-shadow: none;
+      
+    }
+
+    .c31 i,
+    .c32 i,
+    .c33 i {
+      height: 10px;
+      margin-bottom: 5px;
+    }
+
+    .texto {
+      height: 0px;
+      overflow: hidden;
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    .foot {
+      /*background-image: url("./img/foot.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;*/
+      background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(26, 29, 34, 0.7906512946975666) 100%);
+      color: white;
+      width: 100%;
+    }
+
+    .foot * {
+      font-size: 10px;
+      margin: 10px;
+      padding: 10px 0px 10px 0px;
+
+      /*text-shadow: blue 0 -2px, blue 0 2px;*/
+    }
+
+    .foot h5:first-child {
+      float: left;
+    }
+
+    .foot h5:last-child {
+      float: right;
+    }
+
+    @media only screen and (min-width: 769px) {
+
+      .links {
+        top: 200px;
+        left: 0px;
+        width: 100%;
+        height: fit-content;
+
+      }
+
+      .help {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        padding-top: 0px;
+      }
+
+      .help * {
+        padding: 15px 20px 15px 20px;
+      }
+
+      .icons {
+        position: absolute;
+        top: 250px;
+        left: 15px;
+        width: fit-content;
+        height: fit-content;
+        box-shadow: 0px 0px 4px black;
+        
+      }
+
+      .icons i {
+        margin: 10px 20px 10px 20px;
+      }
+
+      .icons i:first-child {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (min-width: 1250px) {
+
+      .icons {
+        
+        top: 206px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="gridContainer clearfix">
+
+    <div class="c11 head">
+
+      <div class="links">
+        <div class="help">
+          <a onclick="reset()" href="#one">Javascript</a>
+          <a onclick="reset()"href="#two">Swift</a>
+          <a onclick="reset()"href="#three">Scala</a>
+          <a onclick="reset()"href="#four">Go</a>
+          <a onclick="reset()"href="#five">Python</a>
+          <a onclick="reset()"href="#six">Elm</a>
+          <a onclick="reset()"href="#seven">Ruby</a>
+          <a onclick="reset()"href="#eight">C#</a>
+          <a onclick="reset()" href="#nine">Rust</a>
+        </div>
+      </div>
+
+      <div class="icons">
+
+        <i onclick="menu()" class="material-icons">menu</i>
+        <i onclick="zoomIn()" class="material-icons">zoom_in</i>
+        <i onclick="zoomOut()" class="material-icons">zoom_out</i>
+        <i onclick="cores()" class="material-icons">invert_colors</i>
+
+      </div>
+    </div>
+
+    <div class="c11 introducao">
+      <div class="cores">
+        <h1>As 9 melhores linguagens de programação para aprender em 2021.</h2>
+          <p>
+            Quando se é novo no campo de desenvolvimento de software, a parte mais difícil de aprender
+            programação é decidir por onde começar. Existem centenas de linguagens de programação amplamente
+            utilizadas, cada uma com suas próprias complexidades e temperamentos.
+          </p>
+          <p>
+            A boa notícia é que, ao iniciar a jornada como desenvolvedor de software, começará a descoberta de
+            qual linguagem de programação será mais adequada, tendo em conta interesses e objetivos de carreira.
+          </p>
+          <p>
+            Na lista abaixo, examinamos as melhores e mais requisitadas linguagens de programação para muitos
+            dos casos de uso mais comuns, incluindo desenvolvimento para web, desenvolvimento para dispositivos
+            móveis, desenvolvimento de jogos e muito mais.
+          </p>
+          <br>
+      </div>
+    </div>
+    <div id="one" class="c31">
+      <div class="titulo">
+
+        <h3 class="numero">1.&nbsp</h3>
+        <h3 class="nome">Javascript</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            É impossível ser um desenvolvedor de software hoje em dia sem usar JavaScript de alguma forma.
+            De acordo com a Pesquisa de Desenvolvedor 2020 do Stack Overflow, JavaScript é a linguagem mais
+            popular entre os desenvolvedores pelo oitavo ano consecutivo. Quase 70 por cento dos
+            respondentes da pesquisa relataram que haviam usado JavaScript no ano passado.
+          </p>
+          <p>
+            Junto com HTML e CSS, JavaScript é essencial para o desenvolvimento front-end da web. A maioria
+            dos sites mais populares da web, do Facebook e Twitter ao Gmail e YouTube, depende do JavaScript
+            para criar páginas da web interativas e exibir conteúdo dinamicamente para os utilizadores.
+          </p>
+          <p>
+            Embora o JavaScript seja principalmente uma linguagem de front-end executada no navegador, ele
+            também pode ser usado no lado do servidor por meio do Node.js para construir aplicativos de rede
+            escalonáveis. Node.js é compatível com Linux, SunOS, Mac OS X e Windows.
+          </p>
+          <p>
+            Como o JavaScript tem uma sintaxe indulgente e flexível e funciona em todos os principais
+            navegadores, é uma das linguagens de programação mais amigáveis para iniciantes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="two" class="c32">
+      <div class="titulo">
+
+        <h3 class="numero">2.&nbsp</h3>
+        <h3 class="nome">Swift</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Para quem está interessado em produtos Apple e desenvolvimento de aplicativos móveis, Swift é um bom lugar
+            para começar. Anunciado pela primeira vez pela Apple em 2014, o Swift é uma linguagem de programação
+            relativamente nova usada para desenvolver aplicativos iOS e macOS.
+          </p>
+          <p>
+            O Swift foi otimizado para desempenho e construído desde o início para corresponder às realidades do
+            desenvolvimento iOS moderno. O iOS não só funciona em todos os iPhone e iPad, mas também é a base para
+            outros
+            sistemas operacionais, como watchOS (para Apple Watches) e tvOS (para Apple TVs). Além disso, a Apple não
+            vai
+            a lugar nenhum como líder da indústria de tecnologia e os aplicativos iOS continuam a ser os mais lucrativos
+            no mercado de aplicativos móveis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="three" class="c33">
+      <div class="titulo">
+
+        <h3 class="numero">3.&nbsp</h3>
+        <h3 class="nome">Scala</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class=" texto">
+        <div class="cores">
+          <p>
+            Para quem está familiarizado com Java, uma linguagem de programação clássica por si só, vale a pena conferir
+            seu primo moderno, Scala. Scala combina os melhores recursos do Java (como sua Estrutura Orientada a Objetos
+            e
+            seu ambiente de tempo de execução JVM ultrarrápido) com um toque moderno.
+          </p>
+          <p>
+            Como uma linguagem de programação funcional, Scala permite que os engenheiros elevem a qualidade de seu
+            código
+            para se assemelhar à matemática pura. Scala permite a programação simultânea, permitindo que procedimentos
+            complexos sejam executados em paralelo. Além disso, é uma linguagem fortemente tipada. Os engenheiros podem
+            criar e personalizar seus próprios tipos de dados, permitindo-lhes ter a paz de espírito sabendo que faixas
+            inteiras de bugs são impossíveis em tempo de execução.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="four" class="c31">
+      <div class="titulo">
+
+        <h3 class="numero">4.&nbsp</h3>
+        <h3 class="nome">Go</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Uma das principais linguagens favorecidas pelo Google, Go é a pequena linguagem que poderia. Como uma
+            linguagem de baixo nível, Go é ideal para engenheiros que desejam entrar no campo da programação de
+            sistemas.
+            Ele engloba grande parte da mesma funcionalidade de C e C ++ sem a sintaxe difícil e a curva de aprendizado
+            íngreme. É a linguagem perfeita para construir servidores da web, pipelines de dados e até pacotes de
+            aprendizado de máquina.
+          </p>
+          <p>
+            Como uma linguagem compilada, Go é executado "perto do metal", permitindo um tempo de execução extremamente
+            rápido. É uma linguagem de código aberto, e desenvolvedores ambiciosos podem ver suas contribuições pessoais
+            adotadas e apreciadas por programadores em todo o mundo.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="five" class="c32">
+      <div class="titulo">
+
+        <h3 class="numero">5.&nbsp</h3>
+        <h3 class="nome">Python</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Python é talvez a linguagem de programação mais amigável de todas nesta lista. Costuma-se dizer que a
+            sintaxe
+            do Python é clara, intuitiva e quase semelhante ao inglês, o que, como o Java, o torna uma escolha popular
+            para iniciantes.
+          </p>
+          <p>
+            Também como o Java, o Python tem uma variedade de aplicativos que o tornam uma opção versátil e poderosa na
+            escolha da melhor linguagem de programação para seu caso de uso. Se você estiver interessado em
+            desenvolvimento web de back-end, por exemplo, a estrutura Django de código aberto, escrita em Python, é
+            popular, fácil de aprender e rica em recursos. Django tem sido usado no desenvolvimento de alguns sites
+            populares como Mozilla, Instagram e Spotify.
+          </p>
+          <p>
+            Python também possui pacotes como NumPy e SciPy que são comumente usados ​​nas áreas de computação
+            científica,
+            matemática e engenharia. Outras bibliotecas Python, como TensorFlow, PyTorch, scikit-learn e OpenCV, são
+            usadas para criar programas em ciência de dados, aprendizado de máquina, processamento de imagens e visão
+            computacional. Os aplicativos de ciência e dados do Python o tornam uma ótima escolha para os que têm
+            inclinações acadêmicas.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="six" class="c33">
+      <div class="titulo">
+
+        <h3 class="numero">6.&nbsp</h3>
+        <h3 class="nome">Elm</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Uma das línguas mais novas em nossa lista, o que começou como uma tese de estudante de Harvard agora cresceu
+            e
+            se tornou um ponto de paixão para desenvolvedores front-end em todo o mundo.
+          </p>
+          <p>
+            Elm compila em JavaScript, tornando-o ideal para construir interfaces de usuário de execução rápida com zero
+            erros em tempo de execução. Elm é uma linguagem de programação funcional, permitindo que os desenvolvedores
+            criem interfaces do lado do cliente sem as armadilhas declarativas de HTML e CSS.
+          </p>
+          <p>
+            Além disso, a arquitetura da web Elm foi a inspiração intelectual para Redux, a biblioteca de gerenciamento
+            de
+            estado ensinada aqui na Fullstack.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="seven" class="c31">
+      <div class="titulo">
+
+        <h3 class="numero">7.&nbsp</h3>
+        <h3 class="nome">Ruby</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Ruby é outra linguagem de script comumente usada para desenvolvimento web. Em particular, é usado como
+            base
+            para a popular estrutura de aplicativo da web Ruby on Rails.
+          </p>
+          <p>
+            Iniciantes geralmente gravitam em torno de Ruby porque ele tem a reputação de ter uma das comunidades de
+            usuários mais amigáveis e úteis. A comunidade Ruby até tem um ditado não oficial, “Matz é legal e nós
+            somos
+            legais”, encorajando os membros a modelar seu comportamento gentil e atencioso no inventor chefe de Ruby,
+            Yukihiro Matsumoto.
+          </p>
+          <p>
+            Além da comunidade ativa e de sua sintaxe direta, Ruby também é uma boa linguagem para aprender, graças à
+            sua
+            associação com grandes empresas de tecnologia. Twitter, Airbnb, Bloomberg, Shopify e inúmeras outras
+            startups
+            criaram seus sites usando Ruby on Rails em algum momento.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="eight" class="c32">
+      <div class="titulo">
+
+        <h3 class="numero">8.&nbsp</h3>
+        <h3 class="nome">C#</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Como C ++, C # (pronuncia-se C Sharp) é uma linguagem orientada a objetos de propósito geral construída
+            sobre
+            os fundamentos de C. Foi originalmente projetada pela Microsoft como parte de sua estrutura .NET para
+            construir aplicativos Windows.
+          </p>
+          <p>
+            C # usa uma sintaxe semelhante a outras linguagens derivadas de C, como C ++, por isso é fácil aprender se
+            você vem de outra linguagem da família C. C # não é apenas a escolha certa para o desenvolvimento de
+            aplicativos da Microsoft, mas também é a linguagem que os desenvolvedores móveis usam para criar
+            aplicativos
+            de plataforma cruzada na plataforma Xamarin.
+          </p>
+          <p>
+            Além disso, qualquer pessoa interessada no desenvolvimento de RV deve considerar aprender C #. C # é a
+            linguagem recomendada para a construção de videogames 3D e 2D usando o popular mecanismo de jogo Unity,
+            que
+            produz um terço dos principais jogos do mercado.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="nine" class="c33">
+      <div class="titulo">
+
+        <h3 class="numero">9.&nbsp</h3>
+        <h3 class="nome">Rust</h3>
+        <i onclick="mostrar(this)" class="material-icons">zoom_in</i>
+
+      </div>
+      <div class="texto">
+        <div class="cores">
+          <p>
+            Rust é um pouco arrogante entre os outros idiomas desta lista, mas isso não significa que não seja um
+            idioma
+            valioso para aprender. A Pesquisa de Desenvolvedor de 2020 do Stack Overflow descobriu que Rust era a
+            linguagem de programação mais amada entre os desenvolvedores pelo quinto ano consecutivo, com 86,1 por
+            cento
+            dos desenvolvedores do Rust dizendo que querem continuar trabalhando com ela.
+          </p>
+          <p>
+            Desenvolvido pela Mozilla Corporation, o Rust, assim como C e C ++, destina-se principalmente à
+            programação de
+            sistemas de baixo nível. O que Rust adiciona à mistura, no entanto, é uma ênfase na velocidade e
+            segurança.
+            Rust enfatiza a escrita de um "código seguro", evitando que os programas acessem partes da memória que não
+            deveriam, o que pode causar um comportamento inesperado e falhas no sistema.
+          </p>
+
+          <p>
+            As vantagens do Rust significam que outras grandes empresas de tecnologia, como Dropbox e Coursera, já
+            estão
+            começando a usá-lo internamente. Embora possa ser um pouco mais difícil de dominar do que outras
+            linguagens
+            para iniciantes, as habilidades de programação do Rust provavelmente terão uma boa recompensa, já que a
+            popularidade da linguagem só continuará a crescer no futuro próximo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="c11 foot">
+      <h5>CARLOS JACINTO</h5>
+      <h5>CET - TPSI - NOVOTECNA - 2021</h5>
+    </div>
+
+  </div>
+</body>
+
+</html>
